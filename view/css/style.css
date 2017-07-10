@@ -1,0 +1,15 @@
+/** Global **/
+:root{
+
+}
+html{}
+body{}
+*{
+    box-sizing: border-box;
+}
+
+/**  **/
+
+@media (max-width: 980px) {
+
+}

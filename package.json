@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "build": "rollup -c & uglifyjs view\\js\\bundle.min.js -c -m -o view\\js\\bundle.min.js",
+    "bundle": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "start http-server & rollup -c -w"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "http-server": "^0.10.0",
+    "postcss-cssnext": "^2.11.0",
+    "rollup": "^0.42.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-postcss": "^0.5.3",
+    "rollup-watch": "^4.0.0",
+    "uglify-js": "^3.0.15"
+  }
+}
