@@ -1,24 +1,27 @@
 {
+  "main": "./src/js/index.js",
   "scripts": {
-    "build": "rollup -c & uglifyjs view\\js\\bundle.min.js -c -m -o view\\js\\bundle.min.js",
+    "build": "rollup -c --environment BUILD:production & uglifyjs dist\\main.min.js -c -m -o dist\\main.min.js",
     "bundle": "rollup -c",
     "watch": "rollup -c -w",
-    "dev": "start http-server & rollup -c -w"
+    "dev": "serve ."
   },
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^8.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-latest": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
-    "http-server": "^0.10.0",
-    "postcss-cssnext": "^2.11.0",
-    "rollup": "^0.42.0",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-postcss": "^0.5.3",
-    "rollup-watch": "^4.0.0",
-    "uglify-js": "^3.0.15"
+    "node-sass": "^4.7.2",
+    "postcss-cssnext": "^3.1.0",
+    "rollup": "^0.56.2",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.3",
+    "rollup-plugin-postcss": "^1.2.8",
+    "serve": "^6.4.11",
+    "uglify-js": "^3.3.11"
   }
 }
